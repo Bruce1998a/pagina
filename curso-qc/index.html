@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Curso – Control de calidad de datos climáticos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="page-course" data-protected="true">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="../home.html" class="app-title">← Volver a mis cursos</a>
+    </div>
+    <div class="topbar-right">
+      <span class="user-label">
+        Usuario: <strong data-username>cargando...</strong>
+      </span>
+      <button class="btn-secondary" data-logout>Salir</button>
+    </div>
+  </header>
+
+  <main class="course-main">
+    <section class="course-header">
+      <h1>Control de calidad de datos climáticos</h1>
+      <p class="course-description">
+        En este curso se revisan conceptos clave de calidad de datos,
+        estándares internacionales (OMM, CRC-SAS), métodos estadísticos básicos
+        y avanzados, y aplicaciones con Python y R para series de precipitación
+        y temperatura.
+      </p>
+    </section>
+
+    <section class="course-layout">
+      <aside class="course-menu">
+        <h2>Módulos</h2>
+        <ol>
+          <li><a href="leccion1.html">Módulo 1: Introducción y conceptos básicos</a></li>
+          <li><span class="locked">Módulo 2: Métodos estadísticos clásicos</span></li>
+          <li><span class="locked">Módulo 3: Machine learning para QC</span></li>
+          <li><span class="locked">Módulo 4: Proyecto final</span></li>
+        </ol>
+      </aside>
+
+      <section class="course-content">
+        <h2>Bienvenido al curso</h2>
+        <p>
+          Te recomendamos avanzar módulo por módulo, revisando el material
+          teórico y practicando con tus propios datos climáticos o los ejemplos
+          proporcionados por el instructor.
+        </p>
+
+        <p>
+          Cuando estés listo, empieza por la primera lección:
+        </p>
+        <a href="leccion1.html" class="btn-primary">Ir al Módulo 1</a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">
+    <small>© <span id="year"></span> Topo Warmi Academy</small>
+  </footer>
+
+  <script src="../assets/js/auth.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

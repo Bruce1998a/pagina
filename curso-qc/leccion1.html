@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Módulo 1 – Introducción al control de calidad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="page-lesson" data-protected="true">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="index.html" class="app-title">← Volver al curso</a>
+    </div>
+    <div class="topbar-right">
+      <span class="user-label">
+        Usuario: <strong data-username>cargando...</strong>
+      </span>
+      <button class="btn-secondary" data-logout>Salir</button>
+    </div>
+  </header>
+
+  <main class="lesson-main">
+    <article class="lesson-content">
+      <h1>Módulo 1 – Introducción al control de calidad de datos climáticos</h1>
+
+      <h2>Objetivos del módulo</h2>
+      <ul>
+        <li>Comprender qué es el control de calidad de datos.</li>
+        <li>Identificar los tipos de errores más frecuentes en datos climáticos.</li>
+        <li>Reconocer la importancia de seguir lineamientos de la OMM.</li>
+      </ul>
+
+      <h2>Contenido</h2>
+      <p>
+        Aquí puedes colocar texto, imágenes, enlaces a PDFs, videos de YouTube
+        o Google Drive, y cualquier recurso adicional que quieras compartir
+        con tus estudiantes.
+      </p>
+
+      <p>
+        Ejemplo de video incrustado:
+      </p>
+      <div class="video-container">
+        <!-- Reemplaza el src por el enlace de tu video -->
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h2>Material descargable</h2>
+      <ul>
+        <li><a href="https://tus-links-a-drive-o-onedrive" target="_blank">Presentación del módulo (PDF)</a></li>
+        <li><a href="https://tus-links-a-drive-o-onedrive" target="_blank">Datos de ejemplo (CSV)</a></li>
+      </ul>
+
+      <h2>Pequeño cuestionario (ejemplo)</h2>
+      <p>1. ¿Por qué es importante el control de calidad antes del análisis climatológico?</p>
+      <p>2. Menciona dos tipos de errores comunes en datos de precipitación.</p>
+    </article>
+  </main>
+
+  <footer class="dashboard-footer">
+    <small>© <span id="year"></span> Topo Warmi Academy</small>
+  </footer>
+
+  <script src="../assets/js/auth.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

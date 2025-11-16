@@ -1,0 +1,189 @@
+:root {
+  --primary: #4b7f52;
+  --primary-dark: #34573a;
+  --secondary: #f0f4f8;
+  --bg: #f7fafc;
+  --text: #222;
+  --muted: #666;
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Landing */
+.page-landing .landing-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-header {
+  padding: 1.5rem 2rem;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.logo-block h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+}
+
+.tagline {
+  margin: .25rem 0 0;
+  color: var(--muted);
+}
+
+.landing-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.landing-panel,
+.landing-info {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.landing-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  color: var(--muted);
+  background: white;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-disabled {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.btn-primary:hover { background: var(--primary-dark); }
+
+.btn-secondary {
+  background: white;
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+.btn-secondary:hover { background: var(--secondary); }
+
+.btn-disabled {
+  background: #ddd;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.note { font-size: .9rem; color: var(--muted); }
+
+/* Dashboard */
+.page-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 1.5rem;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+}
+
+.user-label {
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.dashboard-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.sidebar {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.sidebar h2 { margin-top: 0; font-size: 1rem; }
+.sidebar ul { list-style: none; padding-left: 0; }
+.sidebar a { text-decoration: none; color: var(--text); }
+
+.content {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.course-card {
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #eee;
+  background: #fafafa;
+}
+
+.course-meta {
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: .7rem;
+  font-size: .8rem;
+  color: var(--muted);
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .landing-main { grid-template-columns: 1fr; }
+  .dashboard-main { grid-template-columns: 1fr; }
+  .topbar { flex-direction: column; align-items: flex-start; gap: .5rem; }
+}

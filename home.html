@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Topo Warmi Academy – Mis cursos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="page-dashboard" data-protected="true">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <h1 class="app-title">Topo Warmi Academy</h1>
+    </div>
+    <div class="topbar-right">
+      <span class="user-label">
+        Conectado como: <strong data-username>cargando...</strong>
+      </span>
+      <button class="btn-secondary" data-logout>Salir</button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <aside class="sidebar">
+      <h2>Menú</h2>
+      <ul>
+        <li><a href="home.html" class="active">Mis cursos</a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <h2>Mis cursos</h2>
+      <p>Selecciona un curso para ver el contenido y los materiales.</p>
+
+      <div class="courses-grid">
+        <article class="course-card">
+          <h3>Control de calidad de datos climáticos</h3>
+          <p>
+            Conceptos básicos, estándares OMM, métodos estadísticos
+            y uso de machine learning para detección de datos atípicos.
+          </p>
+          <p class="course-meta">Nivel: Intermedio · Duración: 20 h</p>
+          <button class="btn-primary" disabled>Próximamente</button>
+        </article>
+
+        <article class="course-card">
+          <h3>Topografía con GNSS RTK</h3>
+          <p>
+            Fundamentos GNSS, levantamiento en campo y procesamiento de datos
+            para proyectos topográficos profesionales.
+          </p>
+          <p class="course-meta">Nivel: Intermedio · Próximamente</p>
+          <button class="btn-disabled" disabled>Próximamente</button>
+        </article>
+
+        <article class="course-card">
+          <h3>Mapas web y geovisores</h3>
+          <p>
+            Creación de mapas con Leaflet y publicación de geovisores en Netlify
+            y Google Sites.
+          </p>
+          <p class="course-meta">Nivel: Básico–Intermedio · Próximamente</p>
+          <button class="btn-disabled" disabled>Próximamente</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">
+    <small>© <span id="year"></span> Topo Warmi Academy</small>
+  </footer>
+
+  <script src="assets/js/auth.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
